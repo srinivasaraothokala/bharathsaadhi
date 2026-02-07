@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BharathShaadi — Eternal Connections</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+      /* Smooth fade-in animation for dynamic fields */
+      .hidden-field {
+          display: none;
+          margin-top: 10px;
+          animation: fadeIn 0.4s ease-in-out;
+      }
+      @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-5px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+      
+      /* Layout fix for Age/Height side-by-side */
+      .row-2-cols {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 15px;
+      }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">BharathShaadi</a>
+      <nav class="main-nav">
+        <a href="#about">About</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+        <button id="openFind" class="btn-primary">Find Your Match</button>
+      </nav>
+      <div class="mobile-menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-bg" style="background-image: url('assets/images/image.png');"></div>
+    <div class="hero-overlay"></div>
+    
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Begin your journey <br>to forever.</h1>
+        <p class="lead">
+          India's most trusted matchmaking service. We bring families together with tradition, transparency, and trust.
+        </p>
+        <div class="hero-btns">
+          <button id="heroFind" class="btn-primary large">Find Your Match</button>
+          <a href="#how-it-works" class="btn-ghost">View Process</a>
+        </div>
+        <div class="trust-badges">
+          <span>👑 Premium Verified</span>
+          <span>🔒 100% Secure</span>
+          <span>📞 Dedicated Manager</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section--light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Connecting Hearts, Uniting Families</h2>
+        <p>BharathShaadi isn't just a website; it's a family-run service dedicated to finding the perfect union for your loved ones.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">✨</div>
+          <h3>Curated Profiles</h3>
+          <p>We don't rely on bots. Every profile is manually screened for quality and intent.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🤝</div>
+          <h3>Family Focused</h3>
+          <p>We understand that in India, marriage is a union of two families, not just two individuals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💬</div>
+          <h3>Personal Support</h3>
+          <p>Direct WhatsApp support to answer queries and coordinate meetings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stories" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Happy Beginnings</h2>
+        <p>Real stories of couples who found love through BharathShaadi.</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-card">
+          <img src="assets/images/story3.png" alt="Couple 1">
+          <div class="story-info">
+            <h3>Kiran & Karuna </h3>
+            <p>"We met through BharathShaadi last year. The team understood exactly what our families were looking for."</p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <img src="assets/images/story2.png" alt="Couple 2">
+          <div class="story-info">
+            <h3>Surya Vamshi & Harshada</h3>
+            <p>"Living in the USA, I found it hard to meet people with my values. This platform bridged the gap perfectly."</p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <img src="assets/images/story1.png" alt="Couple 3">
+          <div class="story-info">
+            <h3>Sannith goud & pravallika</h3>
+            <p>"Simple, transparent, and respectful. My parents were very happy with the process."</p>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <img src="assets/images/story4.png" alt="Sharath & Shruthi" style="object-position: center 20%;">
+          <div class="story-info">
+            <h3>Sharath & Shruthi</h3>
+            <p>"A match made in heaven. We are grateful to find a partner who shares the same values and dreams."</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section section--light">
+    <div class="container">
+      <div class="section-header">
+        <h2>How It Works</h2>
+        <p>Three simple steps to your special day.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4>Create Profile</h4>
+          <p>Fill out our detailed form to tell us about yourself and your partner preferences.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4>We Match</h4>
+          <p>Our team manually shortlists profiles that match your community, education, and values.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4>You Connect</h4>
+          <p>Once both sides agree, we exchange contact details so you can take the conversation forward.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="container faq-container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Clear answers to help you decide.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Is my profile information private? <span class="toggle">+</span></button>
+          <div class="faq-a">Yes, absolutely. Unlike other apps, your phone number and photos are not public. We only share them with a match after your specific approval.</div>
+        </div>
+        
+        <div class="faq-item">
+          <button class="faq-q">Is this service free to join? <span class="toggle">+</span></button>
+          <div class="faq-a">Yes, profile submission is completely free. We may have premium plans for personalized relationship manager services, but joining is free.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">What communities do you cover? <span class="toggle">+</span></button>
+          <div class="faq-a">We operate across India with a strong focus on South Indian communities, but we welcome profiles from all regions and religions.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">Can parents create a profile? <span class="toggle">+</span></button>
+          <div class="faq-a">Yes! A majority of our profiles are created by parents or siblings. You can specify who created the profile in the first step of the form.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q">How long does verification take? <span class="toggle">+</span></button>
+          <div class="faq-a">We usually verify profiles within 24-48 hours via a phone call or WhatsApp message to ensure the person is real.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section--light">
+    <div class="container" style="max-width: 700px;">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>Have a question or need assistance? Fill out the form below and we'll get back to you.</p>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <form id="generalContactForm">
+          <input type="hidden" name="profile_for" value="General Inquiry">
+          
+          <label>Name*</label>
+          <input type="text" name="fullname" class="form-input" required>
+
+          <label>Phone Number</label>
+          <input type="tel" name="mobile" class="form-input" required>
+
+          <label>Email Address*</label>
+          <input type="email" name="email" class="form-input" required>
+
+          <label>Comments*</label>
+          <textarea name="comments" class="form-input form-textarea" rows="5" required></textarea>
+
+          <button type="submit" class="btn-submit" style="width: 100%;">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h3 class="brand-footer">BharathShaadi</h3>
+        <p>Making marriages happen with trust and tradition since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Direct Contact</h4>
+        <p><strong>Email:</strong> <a href="mailto:goudmarriage@gmail.com">goudmarriage@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/919016666591">+91 9016666591</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Office Hours</h4>
+        <p>Monday - Saturday</p>
+        <p>9:00 AM - 7:00 PM (IST)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> BharathShaadi. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div id="matchModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose">&times;</button>
+      
+      <div class="wizard-header">
+        <h3>Find Your Match</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <form id="matchForm">
+        
+        <section class="step-panel" data-step="0">
+          <h4 class="step-title">Who is this profile for?</h4>
+          <div class="radio-group-tile">
+            <label class="tile">
+              <input type="radio" name="profile_for" value="Myself" checked>
+              <span>Myself</span>
+            </label>
+            <label class="tile">
+              <input type="radio" name="profile_for" value="Son">
+              <span>Son</span>
+            </label>
+            <label class="tile">
+              <input type="radio" name="profile_for" value="Daughter">
+              <span>Daughter</span>
+            </label>
+            <label class="tile">
+              <input type="radio" name="profile_for" value="Sibling">
+              <span>Sibling</span>
+            </label>
+          </div>
+          <div class="form-actions right">
+            <button type="button" class="btn-primary" data-action="next">Next &rarr;</button>
+          </div>
+        </section>
+
+        <section class="step-panel hidden" data-step="1">
+          <h4 class="step-title">Basic Information</h4>
+          
+          <label>Gender</label>
+          <div class="radio-group-inline">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+          </div>
+
+          <div class="row-2-cols">
+            <div>
+              <label>Age</label>
+              <input type="number" name="age" class="form-input" placeholder="e.g. 25" min="18" max="70">
+            </div>
+            <div>
+              <label>Height</label>
+              <select name="height" class="form-select">
+                <option value="">Select Height</option>
+                <option value="4'5&quot;">4' 5"</option>
+                <option value="4'6&quot;">4' 6"</option>
+                <option value="4'7&quot;">4' 7"</option>
+                <option value="4'8&quot;">4' 8"</option>
+                <option value="4'9&quot;">4' 9"</option>
+                <option value="4'10&quot;">4' 10"</option>
+                <option value="4'11&quot;">4' 11"</option>
+                <option value="5'0&quot;">5' 0"</option>
+                <option value="5'1&quot;">5' 1"</option>
+                <option value="5'2&quot;">5' 2"</option>
+                <option value="5'3&quot;">5' 3"</option>
+                <option value="5'4&quot;">5' 4"</option>
+                <option value="5'5&quot;">5' 5"</option>
+                <option value="5'6&quot;">5' 6"</option>
+                <option value="5'7&quot;">5' 7"</option>
+                <option value="5'8&quot;">5' 8"</option>
+                <option value="5'9&quot;">5' 9"</option>
+                <option value="5'10&quot;">5' 10"</option>
+                <option value="5'11&quot;">5' 11"</option>
+                <option value="6'0&quot;">6' 0"</option>
+                <option value="6'1&quot;">6' 1"</option>
+                <option value="6'2&quot;">6' 2"</option>
+              </select>
+            </div>
+          </div>
+
+          <label>Marital Status</label>
+          <select name="marital_status" class="form-select">
+            <option value="Never Married">Never Married</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widowed">Widowed</option>
+            <option value="Awaiting Divorce">Awaiting Divorce</option>
+          </select>
+
+          <label>Religion</label>
+          <select name="religion" class="form-select">
+            <option value="Hindu">Hindu</option>
+            <option value="Muslim">Muslim</option>
+            <option value="Christian">Christian</option>
+            <option value="Sikh">Sikh</option>
+            <option value="Jain">Jain</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label>Caste</label>
+          <select name="caste" class="form-select" id="casteSelect">
+            <option value="">Select Caste</option>
+            <option value="Reddy">Reddy</option>
+            <option value="Kamma">Kamma</option>
+            <option value="Kapu">Kapu</option>
+            <option value="Brahmin">Brahmin</option>
+            <option value="Goud">Goud</option>
+            <option value="Mudiraj">Mudiraj</option>
+            <option value="SC/ST">SC/ST</option>
+            <option value="Other">Other (Specify)</option>
+          </select>
+          
+          <input type="text" name="caste_manual" id="casteInput" class="form-input hidden-field" placeholder="Enter Caste Name">
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" data-action="prev">Back</button>
+            <button type="button" class="btn-primary" data-action="next">Next &rarr;</button>
+          </div>
+        </section>
+
+        <section class="step-panel hidden" data-step="2">
+          <h4 class="step-title">Education & Career</h4>
+          
+          <label>Highest Education</label>
+          <select name="education" class="form-select" id="educationSelect">
+            <option value="">Select Education</option>
+            <option value="B.Tech / B.E">B.Tech / B.E</option>
+            <option value="M.Tech / M.E">M.Tech / M.E</option>
+            <option value="MBA / PGDM">MBA / PGDM</option>
+            <option value="MBBS / MD">MBBS / MD</option>
+            <option value="B.Com / M.Com">B.Com / M.Com</option>
+            <option value="BCA / MCA">BCA / MCA</option>
+            <option value="Ph.D">Ph.D</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <div id="specializationWrapper" class="hidden-field">
+            <label>Specialization / Branch</label>
+            <input type="text" name="specialization" class="form-input" placeholder="e.g. CSE, EEE, Mechanical">
+          </div>
+
+          <label>Occupation Type</label>
+          <select name="occupation" class="form-select" id="occupationSelect">
+            <option value="">Select Occupation</option>
+            <option value="Software Professional">Software Professional</option>
+            <option value="Private Sector">Private Sector</option>
+            <option value="Government Job">Government Job</option>
+            <option value="Business / Self Employed">Business / Self Employed</option>
+            <option value="Defence / Civil Services">Defence / Civil Services</option>
+            <option value="Not Working">Not Working</option>
+          </select>
+
+          <div id="salaryWrapper" class="hidden-field">
+            <label>Current Salary / Income (LPA)</label>
+            <input type="text" name="salary" class="form-input" placeholder="e.g., 12 LPA">
+          </div>
+
+          <label>Full Name</label>
+          <input type="text" name="fullname" placeholder="Candidate Name" class="form-input">
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" data-action="prev">Back</button>
+            <button type="button" class="btn-primary" data-action="next">Next &rarr;</button>
+          </div>
+        </section>
+
+        <section class="step-panel hidden" data-step="3">
+          <h4 class="step-title">Contact Details</h4>
+          
+          <label>Mobile Number (WhatsApp preferred)</label>
+          <input type="tel" name="mobile" placeholder="+91 98765 43210" class="form-input" required>
+
+          <label>Email Address</label>
+          <input type="email" name="email" placeholder="you@email.com" class="form-input" required>
+
+          
+
+          <div class="form-actions">
+            <button type="button" class="btn-secondary" data-action="prev">Back</button>
+            <button type="submit" class="btn-submit">Submit Profile</button>
+          </div>
+        </section>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+
+  <script>
+    // 1. Caste "Other" Logic
+    const casteSelect = document.getElementById('casteSelect');
+    const casteInput = document.getElementById('casteInput');
+
+    if(casteSelect && casteInput) {
+      casteSelect.addEventListener('change', function() {
+        if(this.value === 'Other') {
+          casteInput.style.display = 'block';
+          casteInput.focus();
+        } else {
+          casteInput.style.display = 'none';
+          casteInput.value = '';
+        }
+      });
+    }
+
+    // 2. Education Specialization Logic
+    const eduSelect = document.getElementById('educationSelect');
+    const specWrapper = document.getElementById('specializationWrapper');
+
+    if(eduSelect && specWrapper) {
+      eduSelect.addEventListener('change', function() {
+        const degreesWithSpec = ['B.Tech / B.E', 'M.Tech / M.E', 'MBA / PGDM', 'MBBS / MD', 'B.Com / M.Com', 'BCA / MCA'];
+        
+        if(degreesWithSpec.includes(this.value)) {
+          specWrapper.style.display = 'block';
+          specWrapper.querySelector('input').focus();
+        } else {
+          specWrapper.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. UNIVERSAL SALARY LOGIC (Polished)
+    // Shows salary box for EVERYONE except "Not Working" or empty selection
+    const occSelect = document.getElementById('occupationSelect');
+    const salaryWrapper = document.getElementById('salaryWrapper');
+
+    if(occSelect && salaryWrapper) {
+      occSelect.addEventListener('change', function() {
+        // List of options that DO NOT have a salary
+        const nonEarning = ['Not Working', ''];
+        
+        if (!nonEarning.includes(this.value)) {
+          salaryWrapper.style.display = 'block';
+          // Auto-focus logic for better UX
+          const input = salaryWrapper.querySelector('input');
+          if(input && document.activeElement !== input) {
+             input.focus();
+          }
+        } else {
+          salaryWrapper.style.display = 'none';
+        }
+      });
+    }
+    
+    // Auto Year update
+    const yearSpan = document.getElementById('year');
+    if(yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
